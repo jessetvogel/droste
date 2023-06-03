@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "museosans";
+  src: url("../fonts/museosans.otf");
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  --clr-background: white;
+  --transition-time: 0.25s;
+  --font-main: "museosans";
+  --clr-text: #263238;
+}
+
+body {
+  background-color: var(--clr-background);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  color: var(--clr-text);
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#canvas {
+  width: 90vh;
+  height: 90vh;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+}
+
+#controls {
+  width: 272px;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 96px 160px;
+  grid-auto-rows: 40px;
+  grid-auto-flow: row dense;
+  padding: 4px 8px;
+  background-color: #eceff1;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+}
+#controls > span.key {
+  grid-column-start: 1;
+  line-height: 32px;
+  text-align: left;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+#controls > div.value {
+  grid-column-start: 2;
+  padding: 4px;
+  display: flex;
+  gap: 8px;
+}
+
+input[type=number] {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  padding: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: var(--font-general);
+  font-size: 12px;
+  outline: none;
+  border: 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.12);
+  color: var(--clr-text);
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

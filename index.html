@@ -1,0 +1,46 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Droste Effect</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="content">
+
+        <div id="controls">
+            <span class="key">Image</span>
+            <div class="value"><input id="input-file" type="file" accept="image/png, image/jpeg" /></div>
+
+            <span class="key">Scaling</span>
+            <div class="value"> <input id="input-scale" type="number" min="1.1" value="2" step="0.01" /></div>
+
+            <span class="key">Translation</span>
+            <div class="value"> <input id="input-translation-x" type="number" value="0" step="0.01" /><input id="input-translation-y" type="number" value="0" step="0.01" /> </div>
+
+            <span class="key">Rotation </span>
+            <div class="value"> <input id="input-rotation" type="range" value="0" step="1" min="0" max="360" /></div>
+
+            <span class="key">Animation</span>
+            <div class="value"> <input id="range-animation-speed" type="range" min="-5" max="5" step="0.1" value="0" /> </div>
+
+            <span class="key">Boundary</span>
+            <div class="value"><input id="checkbox-boundary" type="checkbox" /></div>
+
+            <span class="key">Lattice point</span>
+            <div class="value"> <input id="input-lattice-x" type="number" value="0" min="-10" max="10" /><input id="input-lattice-y" type="number" value="1" min="-10" max="10" /></div>
+        </div>
+
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+    <img id="image" src="img/grid.png" alt style="display: none;" />
+
+    <span id="debug"></span>
+</body>
+
+</html>
