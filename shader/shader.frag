@@ -80,7 +80,7 @@ void main() {
 
     // Transform to w    
     vec2 w = z_to_w(z);
-    w -= log_gamma * mod(uTime * 0.1, 1.0);
+    w -= log_gamma * mod(uTime, 1.0);
 
     // Transform under multiplication by alpha
     w = cx_mul(w, alpha);
